@@ -1,0 +1,24 @@
+<div class="container">
+    <h1>Register</h1>
+ <form [formGroup]="registerform">  
+ <input type="text" placeholder="Nom" formControlName="nom" [(ngModel)]="nom">  
+<div class="alert" *ngIf="registerform.get('nom').hasError('minlength')"> verifier votre nom</div> 
+ <input type="text" placeholder="Prénom" formControlName="prenom" > 
+ <div class="alert" *ngIf="registerform.get('prenom').hasError('minlength')"> verifier votre prenom</div> 
+   
+ <input type="number" placeholder="Numéro telephone" formControlName="numero">    
+ <div class="alert" *ngIf="registerform.get('numero').hasError('pattern')"> verifier votre numéro</div> 
+
+<input type="email" name="" placeholder="Email" id="" formControlName="email">
+<div class="alert" *ngIf="registerform.get('email').hasError('email')"> verifier votre email</div> 
+
+<input type="password" name="" placeholder="MotdePasse" id="" formControlName="mdp"  [(ngModel)]="mdp">
+<div class="alert" *ngIf="registerform.get('mdp').hasError('minlength')"> verifier votre MotdePasse</div> 
+
+<input type="password" name="" placeholder="confirmerMotdePasse" id="" formControlName="mdp2" [(ngModel)]="mdp2">
+<div class="alert" *ngIf="registerform.get('mdp2').hasError('minlength') || mdp!=mdp2 "> Motdepasse non identique</div> 
+
+<button [disabled]="!registerform.valid">confirmer</button>
+
+</form> 
+</div>

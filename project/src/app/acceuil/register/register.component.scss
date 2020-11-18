@@ -1,0 +1,41 @@
+.container{
+    width: max-content;
+    height: max-content;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 99;
+    background-color: white;
+    padding: 2rem 3rem;
+    border-radius: 1rem;
+    
+    label{display: block;}
+    h1{
+        text-align: center;
+        font-family: "lato";
+        text-transform: uppercase;
+        color: #fd2424;
+    }
+}
+button{
+  
+    font-size: 20px;
+
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    background-color: #fd2424;
+    padding: 1rem 4rem;
+    border: none;
+    color: white;
+    border-radius: 2rem;
+    cursor: pointer;
+    position: relative;
+   left: 50%;
+   text-transform: uppercase;
+   transform: translateX(-50%);
+    z-index: 4;
+    &:hover{
+        transform: translateX(-50%) scale(1.05) translateY(-1px);
+    }
+}

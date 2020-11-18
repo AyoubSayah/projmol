@@ -1,0 +1,12 @@
+<div class="container">
+    <form [formGroup]="loginform">
+     <h1 >Login</h1>
+        <input type="email" placeholder="Email" formControlName="email">
+        <div class="alert" *ngIf="loginform.get('email').hasError('email')"> verifier votre email</div> 
+
+        <input type="password" name="" id="" placeholder="Motpasse" formControlName="mdp">
+        <div class="alert" *ngIf="loginform.get('mdp').hasError('minlength')"> verifier votre Motpasse</div> 
+
+        <button class="middlex" [disabled]="!loginform.valid">login</button>
+    </form>
+</div>

@@ -1,0 +1,36 @@
+.container{
+    background-image: url("../../../assets/background.jpg");
+    background-size: cover;
+    width: 1000px;
+    height: 600px;
+    display: flex;
+    h1{
+        color:white;
+        font-family: 'lato';
+        position: absolute;
+        z-index: 2;
+        top: 0%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-weight: 900;
+        text-transform: uppercase;
+
+    }
+    .bg{
+        background-color: #94000078;
+        height: 100vh;
+        width: 100%;
+        position: absolute;
+        top: 0%;
+        z-index: 1;
+        left: 0%;
+    }
+    img{
+        width: 168px;
+        box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, 0.664);
+        height: 150px;
+        border-radius: 11rem;
+        z-index:2;
+
+    }
+}

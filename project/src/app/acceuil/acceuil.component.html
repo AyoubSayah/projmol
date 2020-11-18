@@ -1,0 +1,39 @@
+<header>
+    <div class="navbar">
+        
+        <h1 class="titre"><svg class="home">
+            <use xlink:href="assets/ico.svg#icon-home"></use>
+          </svg>Acceuil</h1>&nbsp;
+        <h1 class="titre"><svg class="home">
+            <use xlink:href="assets/ico.svg#icon-spoon-knife"></use>
+          </svg>Menu</h1>
+          <div class="faza">
+            Copa Cabana
+        </div>
+        <h1 class="titre " (click)="register=true"><svg class="home floatleft">
+            <use xlink:href="assets/ico.svg#icon-add-user"></use>
+          </svg>Register </h1>&nbsp;
+        <h1 class="titre " (click)="login=true"><svg class="home floatleft">
+            <use xlink:href="assets/ico.svg#icon-login"></use>
+          </svg>Login </h1>
+
+       
+    </div>
+    <div class="bg"></div>
+
+    <h1 class="principale"> Vous Pouvez Maintenant Faire Une Commande En Ligne</h1>
+    <button class="btn" (click)="commande=true">Commander</button>
+</header>
+<div *ngIf="register">
+<div (click)="register=false" class="backgroundcolor"></div>
+<app-register></app-register>
+</div>
+<div *ngIf="login">
+  <div (click)="login=false" class="backgroundcolor"></div>
+  <app-login></app-login>
+  </div>
+<div *ngIf="commande">
+  <div (click)="commande=false" class="backgroundcolor"></div>
+
+  <app-commande></app-commande>
+</div>

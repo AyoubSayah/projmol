@@ -1,0 +1,73 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+box-sizing: border-box;
+padding: 0;
+margin: 0;
+background-color: #f2f2f2;
+}
+button:focus{
+    outline:none
+}
+html{
+    font-size: 75%;
+}
+.alert{
+    color: red;
+    font-family: "lato";
+    text-transform: capitalize;
+    font-weight: 700;
+}
+input{
+    display: block;
+    border-radius: 5px;
+    height: 30px;
+    margin: 1rem 0rem;
+    border-color: gray;
+    border-style: solid;
+    width: 300px;
+    color: #525252;
+}
+.container{
+    width: max-content;
+    height: max-content;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 99;
+    background-color: white;
+    padding: 2rem 3rem;
+    border-radius: 1rem;
+}
+.middle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+button{
+  
+    font-size: 20px;
+
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    background-color: #fd2424;
+    padding: 1rem 4rem;
+    border: none;
+    color: white;
+    border-radius: 2rem;
+    cursor: pointer;
+    position: relative;
+   left: 50%;
+   text-transform: uppercase;
+    z-index: 4;
+    &:hover{      
+        transform:translateX(-50%)
+         scale(1.05) translateY(-1px);
+    }
+}
+.middlex{
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
