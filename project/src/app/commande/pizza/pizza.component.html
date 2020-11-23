@@ -1,16 +1,79 @@
-<div class="container">
-    <div class="bg"></div>
-<h1>Pizza</h1>
-    <img src="assets/thon.jpg" alt="">
-    <img src="assets/thon.jpg" alt="">
-    <img src="assets/thon.jpg" alt="">
-    <img src="assets/thon.jpg" alt="">
-    <img src="assets/thon.jpg" alt="">
-    <img src="assets/thon.jpg" alt="">
-    <img src="assets/thon.jpg" alt="">
-    <img src="assets/thon.jpg" alt="">
-    <img src="assets/thon.jpg" alt="">
-    <img src="assets/thon.jpg" alt="">
-    <img src="assets/thon.jpg" alt="">
+<div class="container bg">
+    <!-- <div class="bg"></div> -->
+    <svg class="arrow" (click)="closepopup()">
+        <use xlink:href="assets/ico.svg#icon-arrow-long-left"></use>
+      </svg>
+    <h1>Pizza</h1>
 
+<div class="flex-container">
+<div class="pizza" (click)="details=true">
+    <img src="assets/thon.jpg" alt="">
+    <div class="writing">Thon</div>
+</div>
+<div class="pizza">
+    <img src="assets/thon.jpg" alt="">
+    <div class="writing">Thon</div>
+</div><div class="pizza">
+    <img src="assets/thon.jpg" alt="">
+    <div class="writing">Thon</div>
+</div><div class="pizza">
+    <img src="assets/thon.jpg" alt="">
+    <div class="writing">Thon</div>
+</div><div class="pizza">
+    <img src="assets/thon.jpg" alt="">
+    <div class="writing">Thon</div>
+</div><div class="pizza">
+    <img src="assets/thon.jpg" alt="">
+    <div class="writing">Thon</div>
+</div><div class="pizza">
+    <img src="assets/thon.jpg" alt="">
+    <div class="writing">Thon</div>
+</div><div class="pizza">
+    <img src="assets/thon.jpg" alt="">
+    <div class="writing">Thon</div>
+</div><div class="pizza">
+    <img src="assets/thon.jpg" alt="">
+    <div class="writing">Thon</div>
+</div><div class="pizza">
+    <img src="assets/thon.jpg" alt="">
+    <div class="writing">Thon</div>
+</div><div class="pizza">
+    <img src="assets/thon.jpg" alt="">
+    <div class="writing">Thon</div>
+</div><div class="pizza">
+    <img src="assets/thon.jpg" alt="">
+    <div class="writing">Thon</div>
+</div>
+    
+<div class="pizza">
+    <img src="assets/thon.jpg" alt="">
+    <div class="writing">Thon</div>
+</div><div class="pizza">
+    <img src="assets/thon.jpg" alt="">
+    <div class="writing">Thon</div>
+</div><div class="pizza">
+    <img src="assets/thon.jpg" alt="">
+    <div class="writing">Thon</div>
+</div>
+    
+<div class="pizza">
+    <img src="assets/thon.jpg" alt="">
+    <div class="writing">Thon</div>
+</div><div class="pizza">
+    <img src="assets/thon.jpg" alt="">
+    <div class="writing">Thon</div>
+</div><div class="pizza">
+    <img src="assets/thon.jpg" alt="">
+    <div class="writing">Thon</div>
+</div>
+    
+
+    
+    
+</div>
+
+</div>
+<div *ngIf="details">
+    <div class="backgroundcolor" (click)="details=false"></div>
+<app-details></app-details>
 </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-pizza',
@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pizza.component.scss']
 })
 export class PizzaComponent implements OnInit {
-
+details=false
   constructor() { }
+  @Output() popup= new EventEmitter<any>();
+
 
   ngOnInit(): void {
   }
-
+closepopup(){
+  this.popup.emit(false)
+}
 }

@@ -1,20 +1,26 @@
 <div class="container">
     <div class="flex-container">
-        <div class="img">
-<div class="backgroundcolor"></div>
-<img src="assets/bg3.jpg" alt="">
-<div class="writing middle">Pizza</div>
+        <div class="img" (click)="makloub=true">
+            <div class="backgroundcolor"></div>
+            <img src="assets/makloub.jpg" alt="">
+            <div class="writing middle">Makloub</div>
 
-        </div><div class="img">
+        </div>
+        <div class="img" (click)="pizza=true">
             <div class="backgroundcolor"></div>
 
             <img src="assets/background.jpg" alt="">
             <div class="writing middle">Pizza</div>
         </div>
         <div class="img">
-            
+
         </div>
-       
+
     </div>
 </div>
-<app-pizza></app-pizza>
+<div *ngIf="pizza">
+    <app-pizza (popup)=fermerpopup($event)></app-pizza>
+</div>
+<div *ngIf="makloub">
+    <app-makloub  (popup2)=fermerpopup1($event) ></app-makloub>
+</div>

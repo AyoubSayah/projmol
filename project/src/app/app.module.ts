@@ -13,6 +13,11 @@ import {FormsModule ,ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './acceuil/login/login.component';
 import { CommandeComponent } from './commande/commande.component';
 import { PizzaComponent } from './commande/pizza/pizza.component';
+import { DetailsComponent } from './commande/pizza/details/details.component';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import { MakloubComponent } from './commande/makloub/makloub.component';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatRadioModule} from '@angular/material/radio';
 
 @NgModule({
   declarations: [
@@ -23,7 +28,9 @@ import { PizzaComponent } from './commande/pizza/pizza.component';
     RegisterComponent,
     LoginComponent,
     CommandeComponent,
-    PizzaComponent
+    PizzaComponent,
+    DetailsComponent,
+    MakloubComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +38,11 @@ import { PizzaComponent } from './commande/pizza/pizza.component';
     BrowserAnimationsModule,
     CommonModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    MatButtonToggleModule,
+    MatCheckboxModule,
+    MatRadioModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

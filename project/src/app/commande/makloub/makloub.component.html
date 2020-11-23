@@ -1,0 +1,95 @@
+<div class="container bg">
+    <svg class="arrow" (click)="closepopup()">
+        <use xlink:href="assets/ico.svg#icon-arrow-long-left"></use>
+    </svg>
+    <h1>Makloub</h1>
+
+    <div class="flex-container">
+        <hr>
+        <h1>Viande</h1>
+        <hr>
+        <div class="">
+            <mat-radio-group class="viande">
+
+                <div class="choix">
+
+
+                    <img src="assets/thonn.jpg" alt="">
+                    <div class="backgroundcolor"></div>
+                    <div class="writing middle">4.8D</div>
+
+                    <mat-radio-button  class="checkbox" value="1">Thon</mat-radio-button>
+
+                </div>
+                <div class="choix">
+
+
+                    <img src="assets/chawarma.jpg" alt="">
+                    <div class="backgroundcolor"></div>
+                    <div class="writing middle">3D</div>
+
+                    <mat-radio-button  class="checkbox" value="2">chawarma</mat-radio-button>
+
+                </div>
+                <div class="choix">
+
+
+                    <img src="assets/escalope.jpg" alt="">
+                    <div class="backgroundcolor"></div>
+                    <div class="writing middle">4.5D</div>
+
+                    <mat-radio-button  class="checkbox" value="3">Escalope</mat-radio-button>
+
+                </div>
+            </mat-radio-group>
+        </div>
+        <hr>
+        <h1>Harrisa</h1>
+        <hr>
+        <div>
+            <mat-radio-group class="harrisa">
+
+                <div class="choix">
+                    <img class="img" src="assets/images.jpg" alt="">
+                    <mat-radio-button  class="checkbox" value="1">7aRR</mat-radio-button>
+                </div>
+                <div class="choix">
+                    <mat-radio-button  [checked]="true" class="checkbox" value="2">Normal
+                    </mat-radio-button>
+
+                    <img class="img" src="assets/3adi.jpg" alt="">
+                </div>
+                <div class="choix">
+                    <mat-radio-button class="checkbox" value="3">ma8ir harrisa</mat-radio-button>
+
+                    <img class="img" src="assets/soleil.png" alt="">
+                </div>
+            </mat-radio-group>
+        </div>
+       
+        <hr>
+        <h1>Ingredients</h1>
+        <hr>
+        <div class="viande"> 
+             <div class="choix">
+                <mat-checkbox class="checkbox" color="primary" checked="true">Tomatos</mat-checkbox>
+                <img class="img" src="assets/tomato.jpg" alt="">
+            </div>
+            <div class="choix">
+                <mat-checkbox class="checkbox" color="primary" checked="true">mayonnaise</mat-checkbox>
+                <img class="img" src="assets/mayo.jpeg" alt="">
+            </div>
+            <div class="choix">
+                <mat-checkbox class="checkbox" color="primary" checked="true">onion</mat-checkbox>
+                <img class="img" src="assets/onion.jpg" alt="">
+            </div>
+            <div class="choix">
+                <mat-checkbox class="checkbox" color="primary" checked="true">salades</mat-checkbox>
+                <img class="img" src="assets/salade.jpg" alt="">
+            </div>
+
+        </div>
+        <button class="button middlex">Ajouter</button>
+
+    </div>
+</div>

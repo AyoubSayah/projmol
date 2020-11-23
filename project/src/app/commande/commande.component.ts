@@ -6,10 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./commande.component.scss']
 })
 export class CommandeComponent implements OnInit {
-
+pizza=false
+makloub=false
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  fermerpopup($event){
+    this.pizza=$event
+  }
+  fermerpopup1($event){
+    this.makloub=$event
+  }
 }
+

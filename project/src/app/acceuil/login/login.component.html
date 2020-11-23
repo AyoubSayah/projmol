@@ -7,6 +7,6 @@
         <input type="password" name="" id="" placeholder="Motpasse" formControlName="mdp">
         <div class="alert" *ngIf="loginform.get('mdp').hasError('minlength')"> verifier votre Motpasse</div> 
 
-        <button class="middlex" [disabled]="!loginform.valid">login</button>
+        <button class="button middlex" [disabled]="!loginform.valid">login</button>
     </form>
 </div>
