@@ -1,0 +1,38 @@
+.shopping{
+    position: fixed;
+    top: 80%;
+    left: 90%;
+    width: 5rem;
+    height: 5rem;
+    background-color: white;
+    border-radius: 30px;
+    z-index: 20;
+    box-shadow: 0rem 1rem 1rem 1rem #00000082;
+    cursor: pointer;
+
+    .icon{
+        width: 3rem;
+        height: 3rem;
+        position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    fill: #fd2432;
+
+    }
+    &:hover{
+    transform: scale(1.1);
+    }
+}
+.shopping-details{
+    width: 20rem;
+    height: 27rem;
+    background-color: white;
+    position: absolute;
+    z-index: 5;
+    left: 79%;
+    top: 53%;
+    transform: translate(-20%, -45%);
+    border-radius: 1rem;
+}
+}

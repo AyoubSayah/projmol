@@ -18,6 +18,7 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import { MakloubComponent } from './commande/makloub/makloub.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatRadioModule} from '@angular/material/radio';
+import { ShoppingComponent } from './acceuil/shopping/shopping.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import {MatRadioModule} from '@angular/material/radio';
     CommandeComponent,
     PizzaComponent,
     DetailsComponent,
-    MakloubComponent
+    MakloubComponent,
+    ShoppingComponent
   ],
   imports: [
     BrowserModule,
