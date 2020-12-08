@@ -1,25 +1,31 @@
 <div class="container">
 
     <div class="img">
-        <img src="assets/thon.jpg" alt="">
+        <img [src]="pizza.image" alt="">
     </div>
     <div class="details">
-        pizza au thon: olives mozerella  
+      {{pizza.nom}} : {{pizza.description}}
+ 
        
           
     </div>
 
-        <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
-          <mat-button-toggle value="bold">S</mat-button-toggle>
-          <mat-button-toggle value="italic">M</mat-button-toggle>
-          <mat-button-toggle value="underline" checked>L</mat-button-toggle>
-          <mat-button-toggle value="underlie" >XL</mat-button-toggle>
+        <mat-button-toggle-group name="fontStyle" aria-label="Font Style" [(ngModel)]="prix">
+          <mat-button-toggle value="m">M</mat-button-toggle>
+          <mat-button-toggle value="l" checked>L</mat-button-toggle>
+          <mat-button-toggle value="xl" >XL</mat-button-toggle>
 
         </mat-button-toggle-group>
-        <p class="price">
-            8DT
+        <p class="price" *ngIf="prix=='m'">
+            {{pizza.prixm}}
         </p>
-      <button class="button middlex">Ajouter</button>
+        <p class="price" *ngIf="prix=='l'">
+            {{pizza.prixl}}
+        </p>
+        <p class="price" *ngIf="prix=='xl'">
+            {{pizza.prixxl}}
+        </p>
+      <button class="button middlex" (click)="ajout()">Ajouter</button>
       
    
 </div>

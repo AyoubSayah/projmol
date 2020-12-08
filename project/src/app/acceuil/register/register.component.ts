@@ -12,6 +12,7 @@ export class RegisterComponent implements OnInit {
   nom
   mdp
   mdp2
+  ko
   registerform=new FormGroup({
     'nom': new FormControl('',[Validators.required, Validators.minLength(5)]),
     'mdp': new FormControl('',[Validators.minLength(5)]),

@@ -34,5 +34,55 @@
     top: 53%;
     transform: translate(-20%, -45%);
     border-radius: 1rem;
+    .flex-contain{
+        display: flex;
+        flex-direction: column;
+        overflow: auto;
+        text-transform: capitalize;
+        height: 90%;
+.commande{
+    padding: 1rem 2rem;
+    display: flex;
+justify-content: space-between;
+align-items: baseline;
+    h5{
+        color: #777;
+        width: 100%;
+    word-break: break-all;
+    
+    }
+    .button{
+        padding: 0rem 1rem;
+        font-size: small;
+        position: static;
+        transform: none;
+        background-color: #fd2432;
+        color:white;
+        border-radius: 0%;
+    }
 }
+    }
+    .total{
+        position: fixed;
+        top: 90%;
+        width: 100%;
+        background-color: #fd2432;
+        height: 10%;
+        display: flex;
+        justify-content: space-between;
+        color: white;
+        .button{
+         padding: 0rem 1rem;
+            font-size: small;
+            position: static;
+            transform: none;
+            background-color: white;
+            color: #fd2432;
+            border-radius: 0%;
+        }
+        h3{
+            padding-left: .8rem;
+        }
+    }
 }
+

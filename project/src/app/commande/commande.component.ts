@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-commande',
@@ -8,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class CommandeComponent implements OnInit {
 pizza=false
 makloub=false
+commande={viande:String}
+@Output() sendcommand = new EventEmitter<any>();
+
   constructor() { }
 
   ngOnInit(): void {
@@ -18,5 +21,10 @@ makloub=false
   fermerpopup1($event){
     this.makloub=$event
   }
+  getcommande($event){
+    this.commande=$event
+    this.sendcommand.emit(this.commande)
+  }
+  
 }
 

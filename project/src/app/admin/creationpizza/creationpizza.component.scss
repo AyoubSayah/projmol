@@ -1,0 +1,52 @@
+.contain{
+    position: relative;
+}
+h1{
+    font-weight: 500;
+    margin-top: 6rem;
+    color: white;
+    text-transform: capitalize;
+    text-align: center;
+    padding: 2rem;
+}
+.form{
+    width: 60rem;
+    height: 44rem;
+    background-color: #750000;
+    margin-left: 60%;
+    transform: translateX(-40%);
+    border-radius: 10rem;
+    form{
+        margin-left: 2rem;
+    }
+    .middle{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+    img{
+        width: 120px;
+        height: 120px;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    button{
+        margin-top: -2rem;
+        margin-bottom: 1rem;
+    }
+    .prix{
+        display: inline;
+        width:70px ;
+        margin-right: 14px;
+        margin-left: 10px;
+    }
+    textarea{
+        width: 300px;
+        margin: 0;
+        height: 100px;
+
+    }
+}

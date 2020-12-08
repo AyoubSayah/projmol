@@ -6,66 +6,11 @@
     <h1>Pizza</h1>
 
 <div class="flex-container">
-<div class="pizza" (click)="details=true">
-    <img src="assets/thon.jpg" alt="">
-    <div class="writing">Thon</div>
+<div class="pizza" *ngFor="let pizza of Data" (click)="detail(pizza)">
+    <img [src]="pizza.image" alt="">
+    <div class="writing">{{pizza.nom}}</div>
 </div>
-<div class="pizza">
-    <img src="assets/thon.jpg" alt="">
-    <div class="writing">Thon</div>
-</div><div class="pizza">
-    <img src="assets/thon.jpg" alt="">
-    <div class="writing">Thon</div>
-</div><div class="pizza">
-    <img src="assets/thon.jpg" alt="">
-    <div class="writing">Thon</div>
-</div><div class="pizza">
-    <img src="assets/thon.jpg" alt="">
-    <div class="writing">Thon</div>
-</div><div class="pizza">
-    <img src="assets/thon.jpg" alt="">
-    <div class="writing">Thon</div>
-</div><div class="pizza">
-    <img src="assets/thon.jpg" alt="">
-    <div class="writing">Thon</div>
-</div><div class="pizza">
-    <img src="assets/thon.jpg" alt="">
-    <div class="writing">Thon</div>
-</div><div class="pizza">
-    <img src="assets/thon.jpg" alt="">
-    <div class="writing">Thon</div>
-</div><div class="pizza">
-    <img src="assets/thon.jpg" alt="">
-    <div class="writing">Thon</div>
-</div><div class="pizza">
-    <img src="assets/thon.jpg" alt="">
-    <div class="writing">Thon</div>
-</div><div class="pizza">
-    <img src="assets/thon.jpg" alt="">
-    <div class="writing">Thon</div>
-</div>
-    
-<div class="pizza">
-    <img src="assets/thon.jpg" alt="">
-    <div class="writing">Thon</div>
-</div><div class="pizza">
-    <img src="assets/thon.jpg" alt="">
-    <div class="writing">Thon</div>
-</div><div class="pizza">
-    <img src="assets/thon.jpg" alt="">
-    <div class="writing">Thon</div>
-</div>
-    
-<div class="pizza">
-    <img src="assets/thon.jpg" alt="">
-    <div class="writing">Thon</div>
-</div><div class="pizza">
-    <img src="assets/thon.jpg" alt="">
-    <div class="writing">Thon</div>
-</div><div class="pizza">
-    <img src="assets/thon.jpg" alt="">
-    <div class="writing">Thon</div>
-</div>
+
     
 
     
@@ -75,5 +20,5 @@
 </div>
 <div *ngIf="details">
     <div class="backgroundcolor" (click)="details=false"></div>
-<app-details></app-details>
+<app-details [pizza]="mypizza" ></app-details>
 </div>

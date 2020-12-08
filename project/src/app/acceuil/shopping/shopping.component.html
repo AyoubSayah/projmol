@@ -1,8 +1,21 @@
-<div class="shopping">
+<div class="shopping" (click)="details=!details">
     <svg class="icon">
         <use xlink:href="assets/ico.svg#icon-shopping-cart"></use>
       </svg>
 </div>
-<div class="shopping-details">
+<div class="shopping-details" *ngIf="details">
+  <div class="flex-contain">
+<div class="commande" *ngFor="let com of command" >
   
+  <h5>{{com.type.nom}}</h5>
+  <h5 [style.margin-left]="'5px'">{{com.type.prix}}DT</h5>
+  <button class="button" (click)="delete(com)">X</button>
+</div>
+
+  </div>
+  <div class="total">
+    <h3>Total:</h3>
+    <h3>{{solde.prix }}DT</h3>
+    <button class="button" (click)="ecrire()">confirmer</button>
+  </div>
 </div>

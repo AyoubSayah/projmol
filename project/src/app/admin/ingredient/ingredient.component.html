@@ -1,0 +1,19 @@
+<div class="contain">
+    <div class="form">
+        <h1>Ajout ingredient</h1>
+
+        <div class="middle">
+<form [formGroup]="form">
+            <input type="text" placeholder="NomMakloub" formControlName="nom" >
+            <label for="photo" class="select btn1">Upload</label>
+            <input type="file" name="" id="photo" placeholder="choisir image"  (change)="getimage($event)" >
+            <button class="button middlex" (click)="ajouter()" [disabled]="!form.valid">Ajouter</button>
+            <img *ngIf="preview" [src]="preview" alt="">
+        </form>
+
+    
+
+        </div>
+
+    </div>
+</div>

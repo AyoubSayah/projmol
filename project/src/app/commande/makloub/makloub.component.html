@@ -9,52 +9,33 @@
         <h1>Viande</h1>
         <hr>
         <div class="">
-            <mat-radio-group class="viande">
+            <mat-radio-group class="viande" [(ngModel)]="command.type">
 
-                <div class="choix">
+                <div class="choix" *ngFor="let viande of makloubs">
 
 
-                    <img src="assets/thonn.jpg" alt="">
+                    <img [src]="viande.image" alt="">
                     <div class="backgroundcolor"></div>
-                    <div class="writing middle">4.8D</div>
+                    <div class="writing middle">{{viande.prix}}DT</div>
 
-                    <mat-radio-button  class="checkbox" value="1">Thon</mat-radio-button>
+                    <mat-radio-button  class="checkbox" [value]="viande">{{viande.nom}}</mat-radio-button>
 
                 </div>
-                <div class="choix">
-
-
-                    <img src="assets/chawarma.jpg" alt="">
-                    <div class="backgroundcolor"></div>
-                    <div class="writing middle">3D</div>
-
-                    <mat-radio-button  class="checkbox" value="2">chawarma</mat-radio-button>
-
-                </div>
-                <div class="choix">
-
-
-                    <img src="assets/escalope.jpg" alt="">
-                    <div class="backgroundcolor"></div>
-                    <div class="writing middle">4.5D</div>
-
-                    <mat-radio-button  class="checkbox" value="3">Escalope</mat-radio-button>
-
-                </div>
+             
             </mat-radio-group>
         </div>
         <hr>
         <h1>Harrisa</h1>
         <hr>
         <div>
-            <mat-radio-group class="harrisa">
+            <mat-radio-group class="harrisa" [(ngModel)]="command.harrisa">
 
                 <div class="choix">
                     <img class="img" src="assets/images.jpg" alt="">
                     <mat-radio-button  class="checkbox" value="1">7aRR</mat-radio-button>
                 </div>
                 <div class="choix">
-                    <mat-radio-button  [checked]="true" class="checkbox" value="2">Normal
+                    <mat-radio-button  checked="true" class="checkbox" value="2">Normal
                     </mat-radio-button>
 
                     <img class="img" src="assets/3adi.jpg" alt="">
@@ -71,25 +52,14 @@
         <h1>Ingredients</h1>
         <hr>
         <div class="viande"> 
-             <div class="choix">
-                <mat-checkbox class="checkbox" color="primary" checked="true">Tomatos</mat-checkbox>
-                <img class="img" src="assets/tomato.jpg" alt="">
+             <div class="choix" *ngFor="let ing of ingred">
+                <mat-checkbox class="checkbox" color="primary" [(ngModel)]="ing.checked" checked="true">{{ing.nom}}</mat-checkbox>
+                <img class="img" [src]="ing.image" alt="">
             </div>
-            <div class="choix">
-                <mat-checkbox class="checkbox" color="primary" checked="true">mayonnaise</mat-checkbox>
-                <img class="img" src="assets/mayo.jpeg" alt="">
-            </div>
-            <div class="choix">
-                <mat-checkbox class="checkbox" color="primary" checked="true">onion</mat-checkbox>
-                <img class="img" src="assets/onion.jpg" alt="">
-            </div>
-            <div class="choix">
-                <mat-checkbox class="checkbox" color="primary" checked="true">salades</mat-checkbox>
-                <img class="img" src="assets/salade.jpg" alt="">
-            </div>
+          
 
         </div>
-        <button class="button middlex">Ajouter</button>
+        <button class="button middlex" (click)="ajouter()">Ajouter</button>
 
     </div>
 </div>

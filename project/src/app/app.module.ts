@@ -19,6 +19,12 @@ import { MakloubComponent } from './commande/makloub/makloub.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatRadioModule} from '@angular/material/radio';
 import { ShoppingComponent } from './acceuil/shopping/shopping.component';
+import { SidebarComponent } from './admin/sidebar/sidebar.component';
+import { AdminComponent } from './admin/admin/admin.component';
+import { MakloubadminComponent } from './admin/makloubadmin/makloubadmin.component';
+import { HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
+import { CreationpizzaComponent } from './admin/creationpizza/creationpizza.component';
+import { IngredientComponent } from './admin/ingredient/ingredient.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +38,12 @@ import { ShoppingComponent } from './acceuil/shopping/shopping.component';
     PizzaComponent,
     DetailsComponent,
     MakloubComponent,
-    ShoppingComponent
+    ShoppingComponent,
+    SidebarComponent,
+    AdminComponent,
+    MakloubadminComponent,
+    CreationpizzaComponent,
+    IngredientComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +54,8 @@ import { ShoppingComponent } from './acceuil/shopping/shopping.component';
     FormsModule,
     MatButtonToggleModule,
     MatCheckboxModule,
-    MatRadioModule
+    MatRadioModule,
+    HttpClientModule
 
   ],
   providers: [],

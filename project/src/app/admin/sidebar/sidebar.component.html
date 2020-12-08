@@ -1,0 +1,67 @@
+<aside class="left-sidebar" data-sidebarbg="skin5">
+    <!-- Sidebar scroll-->
+    <div class="scroll-sidebar">
+        <!-- Sidebar navigation-->
+        <nav class="sidebar-nav">
+            <h1>Copa Cobana</h1>
+            <ul id="sidebarnav">
+                <li class="sidebar-item" (click)="commande()">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" [class]="commandes? 'selected':''" 
+                    aria-expanded="false">
+                        <svg class="home">
+                            <use xlink:href="assets/ico.svg#icon-spoon-knife"></use>
+                          </svg>
+                        <span class="hide-menu">Commandes</span>
+                    </a>
+                </li>
+                <li class="sidebar-item" (click)="makloub()">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                        aria-expanded="false">
+                        <svg class="home">
+                            <use xlink:href="assets/ico.svg#icon-fastfood"></use>
+                          </svg>
+                        <span class="hide-menu">Makloub</span>
+                    </a>
+                </li>
+                <li class="sidebar-item" (click)="pizza()">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" 
+                        aria-expanded="false">
+                        <svg class="home">
+                            <use xlink:href="assets/ico.svg#icon-local_pizza"></use>
+                          </svg>
+                        <span class="hide-menu">Pizza</span>
+                    </a>
+                </li>
+                <li class="sidebar-item" (click)="ingred()">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                        aria-expanded="false">
+                        <svg class="home">
+                            <use xlink:href="assets/ico.svg#icon-local_pizza"></use>
+                          </svg>
+                        <span class="hide-menu">Ingredients</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" 
+                        aria-expanded="false">
+                        <span class="hide-menu">Icon</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" 
+                        aria-expanded="false">
+                        <span class="hide-menu">Blank</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="error-404.html"
+                        aria-expanded="false">
+                        <span class="hide-menu">404</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- End Sidebar navigation -->
+    </div>
+    <!-- End Sidebar scroll-->
+</aside>

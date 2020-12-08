@@ -1,0 +1,17 @@
+<body>
+    <app-sidebar (sendingr)="fermeringred($event)" (sendcommande)="fermercomande($event)"
+        (sendpizza)="fermerpizza($event)" (sendmakloub)=" fermermakloub($event)"></app-sidebar>
+    <div class="makloub">
+
+        <div *ngIf="makloub">
+            <app-makloubadmin></app-makloubadmin>
+
+        </div>
+        <div *ngIf="pizza">
+            <app-creationpizza></app-creationpizza>
+        </div>
+        <div *ngIf="ingred">
+            <app-ingredient></app-ingredient>
+        </div>
+    </div>
+</body>
