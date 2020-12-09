@@ -21,4 +21,7 @@ getallmakloub(){
    console.log("ddddddd")
    return this.http.post(this.url+ "/ajoutcommande",commande)
  }
+ getcommande(){
+   return this.http.get(this.url + "/getcommande")
+ }
 }

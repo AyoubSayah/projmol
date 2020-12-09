@@ -37,6 +37,7 @@ this.list.total=this.solde.prix
 this.Admin.addcommande(this.list).subscribe(()=>{
   this.liste.deleteliste()
   this.command.splice(0,this.command.length)
+  this.solde.prix=0
 })
 
   })

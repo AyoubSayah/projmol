@@ -5,7 +5,7 @@ export class makloub {
   type:any
   harrisa:any
   
-  
+  ingred:any[]
   pizzawalamak:any='makloub'
 }
 @Component({
@@ -28,7 +28,6 @@ ingred=[]
   this.command.harrisa=2
     this.cmd.getallmakloub().subscribe((data:any)=>{
       this.makloubs=data.Makloub
-      console.log(this.makloubs);
       
     })
     this.cmd.getallingred().subscribe((data:any)=>{
@@ -40,10 +39,8 @@ ajouter(){
   console.log(this.command)
   // this.sendcommand.emit(this.commande)
 this.command.pizzawalamak='makloub'
-this.commande.pizzawalamak=this.command.pizzawalamak
-this.commande.harrisa=this.command.harrisa
-  this.commande.ingred=this.ingred
-  this.commande.type=this.command.type
+this.command.ingred=this.ingred
+
   this.liste.add(this.command)
 }
 

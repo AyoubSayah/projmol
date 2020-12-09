@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { AdminserviceService } from 'src/app/apis/adminservice.service';
+import * as mapboxgl from 'mapbox-gl';
 
 @Component({
   selector: 'app-ingredient',

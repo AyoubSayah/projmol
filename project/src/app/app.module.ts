@@ -25,6 +25,9 @@ import { MakloubadminComponent } from './admin/makloubadmin/makloubadmin.compone
 import { HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { CreationpizzaComponent } from './admin/creationpizza/creationpizza.component';
 import { IngredientComponent } from './admin/ingredient/ingredient.component';
+import {MatExpansionModule} from '@angular/material/expansion';
+import { GetcommandeComponent } from './admin/getcommande/getcommande.component';
+
 
 @NgModule({
   declarations: [
@@ -43,7 +46,8 @@ import { IngredientComponent } from './admin/ingredient/ingredient.component';
     AdminComponent,
     MakloubadminComponent,
     CreationpizzaComponent,
-    IngredientComponent
+    IngredientComponent,
+    GetcommandeComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +59,7 @@ import { IngredientComponent } from './admin/ingredient/ingredient.component';
     MatButtonToggleModule,
     MatCheckboxModule,
     MatRadioModule,
-    HttpClientModule
+    HttpClientModule,MatExpansionModule
 
   ],
   providers: [],

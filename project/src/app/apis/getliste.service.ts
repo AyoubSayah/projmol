@@ -45,6 +45,7 @@ delete(element){
 }
 deleteliste(){
   this.list.splice(0,this.list.length)
+  this.sold.prix=0
 }
   constructor() { }
 }

@@ -10,4 +10,5 @@ app.get('/pizza',controller2.getallpizza)
 app.get('/makloub',controller2.getallmakloubs)
 app.get('/ingredients',controller2.getallingredients)
 app.post('/ajoutcommande',controller2.addcommande)
+app.get('/getcommande',controller2.getcommande)
 } 

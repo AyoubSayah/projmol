@@ -52,3 +52,14 @@ exports.addcommande=async(req,res)=>{
         console.log("hey")
     }
 }
+exports.getcommande=async(req,res)=>{
+    try {
+        Commande=await commande.find()
+        res.status(200).json({
+            status:'succses',
+            Commande
+        })
+    } catch (error) {
+        console.log(error);
+    }
+}

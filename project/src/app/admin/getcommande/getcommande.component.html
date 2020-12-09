@@ -1,0 +1,53 @@
+<mat-accordion *ngFor="let com of commandes ,let i=index">
+    <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+            <mat-panel-title>  Commande  {{i+1}} {{item}}
+                 </mat-panel-title>
+            <mat-panel-description>
+               <h4 *ngIf="com.total">PrixTotal: {{com.total}}DT</h4> 
+                <button (click)="localisation(com)">localisation</button>
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div class="flex">
+            <div *ngFor="let l of com.list">
+                <div class="flex-container">
+                    <div><img [src]="l.type.image" alt="">
+                        <p>{{l.type.nom}}</p>
+                    </div>
+                    <div class="flex-container" *ngIf="l.ingred">
+                    <div  *ngFor="let ing of l.ingred">
+                        <div [style.margin]="'3px'" *ngIf="ing.checked">  
+                            <img [src]="ing.image" alt="">
+                            <p> {{ing.nom}}</p>
+                        </div>
+                    </div>
+                     
+                    </div>
+                    <div *ngIf="l.harrisa">
+                        <div *ngIf="l.harrisa==1">
+                            <img src="assets/harr.jpeg" alt="">
+                            <p>7arr</p></div>
+                        <div *ngIf="l.harrisa==2"><img src="assets/3adi.jpg" alt="">  <p>Normal</p> </div>
+                        <div *ngIf="l.harrisa==3"><img src="assets/soleil.png" alt=""> <p>Moch7ar</p></div>
+
+
+                    </div>
+                    <div *ngIf="l.type.taille">
+                        <h2>Taille:{{l.type.taille}}</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </mat-expansion-panel>
+</mat-accordion>
+
+
+    <div class="" *ngIf="local">
+        <div class="backgroundcolor" (click)="local=false"></div>
+        <div class="map" id="map" class="match-parent container"></div>
+    
+    
+    </div> 
+
+
