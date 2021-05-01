@@ -3,51 +3,61 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
-  styleUrls: ['./sidebar.component.scss']
+  styleUrls: ['./sidebar.component.scss'],
 })
 export class SidebarComponent implements OnInit {
-  @Output() sendcommande= new EventEmitter<any>();
-  @Output() sendpizza= new EventEmitter<any>();
-  @Output() sendmakloub= new EventEmitter<any>();
-   @Output() sendingr=new EventEmitter<any>();
-  constructor() { }
-commandes=true
-makloubs=false
-pizzas=false
-ing=false
-  ngOnInit(): void {
+  @Output() sendcommande = new EventEmitter<any>();
+  @Output() sendpizza = new EventEmitter<any>();
+  @Output() sendmakloub = new EventEmitter<any>();
+  @Output() sendingr = new EventEmitter<any>();
+  constructor() {}
+  commandes = true;
+  makloubs = false;
+  pizzas = false;
+  ing = false;
+  ngOnInit(): void {}
+  commande() {
+    this.sendmakloub.emit(false);
+    this.sendpizza.emit(false);
+    this.sendingr.emit(false);
+    this.ing = false;
+    this.pizzas = false;
+    this.makloubs = false;
+
+    this.commandes = true;
+    this.sendcommande.emit(this.commandes);
   }
-  commande(){
-    this.sendmakloub.emit(false)
-    this.sendpizza.emit(false)
-    this.sendingr.emit(false)
+  makloub() {
+    this.sendcommande.emit(false);
+    this.sendpizza.emit(false);
+    this.sendingr.emit(false);
+    this.commandes = false;
+    this.pizzas = false;
+    this.makloubs = true;
+    this.ing = false;
 
-    this.commandes=true
-    this.sendcommande.emit(this.commandes)
+    this.sendmakloub.emit(this.makloubs); // tabath l parent ili variable makloub tbadeel
   }
-  makloub(){
-    this.sendcommande.emit(false)
-    this.sendpizza.emit(false)
-    this.sendingr.emit(false)
+  pizza() {
+    this.sendcommande.emit(false);
+    this.sendmakloub.emit(false);
+    this.sendingr.emit(false);
+    this.commandes = false;
+    this.ing = false;
 
-    this.makloubs=true
-
-    this.sendmakloub.emit(this.makloubs) // tabath l parent ili variable makloub tbadeel
+    this.makloubs = false;
+    this.pizzas = true;
+    this.sendpizza.emit(this.pizzas);
   }
-  pizza(){
-    this.sendcommande.emit(false)
-     this.sendmakloub.emit(false)
-     this.sendingr.emit(false)
+  ingred() {
+    this.sendpizza.emit(false);
+    this.sendcommande.emit(false);
+    this.sendmakloub.emit(false);
+    this.commandes = false;
+    this.pizzas = false;
+    this.makloubs = false;
 
-
-    this.pizzas=true
-    this.sendpizza.emit(this.pizzas)
-  }
-  ingred(){
-    this.sendpizza.emit(false)
-    this.sendcommande.emit(false)
-    this.sendmakloub.emit(false)
-    this.ing=true
-    this.sendingr.emit(this.ing)
+    this.ing = true;
+    this.sendingr.emit(this.ing);
   }
 }

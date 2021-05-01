@@ -1,130 +1,149 @@
 .container {
-	background-image: radial-gradient(#94000078, #b332327e), url("../../../assets/makloub.jpg");
-	background-size: cover;
-	max-width: 1000px;
-	width: fit-content;
-	height: 600px;
-	min-width: 600px;
-	overflow: auto;
-	hr {
-		border-color: white;
-		width: 100%;
-	}
-	.arrow {
-		fill: rgb(26, 179, 26);
-		width: 5rem;
-		height: 5rem;
-		cursor: pointer;
-		margin-top: 2rem;
-	}
-	h1 {
-		color: white;
-		font-family: 'lato';
-		text-align: center;
-		font-weight: 900;
-		text-transform: uppercase;
-		z-index: 2;
-		position: relative;
-	}
-	.flex-container {
-		display: flex;
-		flex-wrap: wrap;
-		align-content: space-evenly;
-		justify-content: center;
-		flex-direction: column;
-		h1 {
-			font-weight: 500;
-			font-family: Roboto, "Helvetica Neue", sans-serif;
-			margin-bottom: 0rem;
-		}
+  //   background-image: radial-gradient(#94000078, #b332327e),
+  //     url("../../../assets/makloub.jpg");
+  background-size: cover;
+  max-width: 1000px;
+  width: fit-content;
+  height: 555px;
+  min-width: 600px;
+  overflow: auto;
+  max-height: 100%;
+  hr {
+    border-color: #bbbbbb;
+    width: 100%;
+    border-width: 0.5px;
+    margin-top: 3rem;
+  }
+  .arrow {
+    fill: rgb(26, 179, 26);
+    width: 5rem;
+    height: 5rem;
+    cursor: pointer;
+    margin-top: 2rem;
+  }
+  h1 {
+    color: #171515;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    font-weight: 400;
+    text-transform: capitalize;
+    z-index: 2;
+    position: relative;
+  }
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+    justify-content: center;
+    flex-direction: column;
+    h1 {
+      font-weight: 400;
+      font-family: "Montserrat", sans-serif;
+      margin-bottom: 0rem;
+    }
 
-		.harrisa {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
-			.choix {
-				position: relative;
-				margin: 1rem 3rem;
-				.checkbox {
-					position: absolute;
-					left: 50%;
-					color: white;
-					top: 99%;
-					transform: translateX(-50%);
-				}
+    .harrisa {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      .choix {
+        position: relative;
+        margin: 1rem 3rem;
+        .checkbox {
+          position: absolute;
+          left: 50%;
+          color: rgb(2, 2, 2);
+          top: 99%;
+          transform: translateX(-50%);
+        }
 
-				img {
-					width: 100px;
-					border-radius: 50px;
-					height: 100px;
-				}
-			}
+        img {
+          width: 100px;
+          border-radius: 50px;
+          height: 100px;
         }
-        .viande{
-            display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
-           .choix{position: relative;
-            margin: 1rem ;}
-            img {
-                width: 90px;
-                border-radius: 50px;
-                height: 90px;
-            }
-            .writing{
-                color: white;
-                font-family: 'lato';
-                font-weight: 600;
-                z-index:99;
-                left: 50%;
-    transform: translate(-55%, -50%);
-            }
-            .backgroundcolor{
-                width: 90px;
-                border-radius: 50px;
-                height: 90px;            }
-                .checkbox {
-					position: absolute;
-					left: 50%;
-					color: white;
-					top: 99%;
-					transform: translateX(-50%);
-				}
-        }
-.ingredients{
-	display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
-           .choix{position: relative;
-			margin: 1rem ;}
-			img {
-                width: 90px;
-                border-radius: 50px;
-                height: 90px;
-            }
+      }
+    }
+    .viande {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      .choix {
+        position: relative;
+        margin: 1rem;
+      }
+      img {
+        width: 90px;
+        border-radius: 50px;
+        height: 90px;
+      }
+      .writing {
+        color: rgb(255, 255, 255);
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        z-index: 99;
+        left: 50%;
+        transform: translate(-55%, -50%);
+      }
+      .backgroundcolor {
+        width: 90px;
+        border-radius: 50px;
+        height: 90px;
+      }
+      .checkbox {
+        position: absolute;
+        left: 50%;
+        color: black;
+        top: 99%;
+        transform: translateX(-50%);
+      }
+    }
+    .ingredients {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      .choix {
+        position: relative;
+        margin: 1rem;
+      }
+      img {
+        width: 90px;
+        border-radius: 50px;
+        height: 90px;
+      }
+    }
+
+    .button {
+      margin-top: 3rem;
+      width: max-content;
+      padding: 1rem 5rem;
+    }
+  }
 }
-	
-.button{
-margin-top: 3rem;
-width: 50%;}}
+:host ::ng-deep .mat-radio-button.mat-accent .mat-radio-inner-circle,
+.mat-radio-button.mat-accent
+  .mat-radio-ripple
+  .mat-ripple-element:not(.mat-radio-persistent-ripple),
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-persistent-ripple,
+.mat-radio-button.mat-accent:active .mat-radio-persistent-ripple {
+  background-color: #f44336;
 }
-:host ::ng-deep  .mat-radio-button.mat-accent .mat-radio-inner-circle, .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element:not(.mat-radio-persistent-ripple), .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-persistent-ripple, .mat-radio-button.mat-accent:active .mat-radio-persistent-ripple {
-    background-color: #ffffff;
-}
-:host ::ng-deep .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
-    border-color: #ffffff;
+:host
+  ::ng-deep
+  .mat-radio-button.mat-accent.mat-radio-checked
+  .mat-radio-outer-circle {
+  border-color: #f44336;
 }
 :host ::ng-deep .mat-checkbox-checkmark-path {
-    stroke: #ff0b0b !important;
+  stroke: #fff !important;
 }
 :host ::ng-deep .mat-checkbox-frame {
-    background-color: #ffeaea00;
-    transition: border-color 90ms cubic-bezier(0, 0, 0.2, 0.1);
-    border-width: 2px;
-    border-style: solid;
-    border-color: white;
+  background-color: #ffeaea00;
+  transition: border-color 90ms cubic-bezier(0, 0, 0.2, 0.1);
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgb(2, 2, 2);
 }
-:host ::ng-deep  .mat-checkbox-checked.mat-primary .mat-checkbox-background {
-
-	background-color: #ffffff;
-  }
+:host ::ng-deep .mat-checkbox-checked.mat-primary .mat-checkbox-background {
+  background-color: #640606;
+}

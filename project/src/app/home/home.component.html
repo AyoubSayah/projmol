@@ -1,25 +1,47 @@
 <header>
-    <div class="navbar">
-        
-        <h1 class="titre"><svg class="home">
-            <use xlink:href="assets/ico.svg#icon-home"></use>
-          </svg>Acceuil</h1>&nbsp;
-        <h1 class="titre"><svg class="home">
-            <use xlink:href="assets/ico.svg#icon-spoon-knife"></use>
-          </svg>Menu</h1>
-        <h1 class="titre float">Register <svg class="home floatleft">
-            <use xlink:href="assets/ico.svg#icon-add-user"></use>
-          </svg></h1>&nbsp;
-        <h1 class="titre float">Login <svg class="home floatleft">
-            <use xlink:href="assets/ico.svg#icon-login"></use>
-          </svg></h1>
+  <div class="navbar">
+    <h1 class="titre">
+      <svg class="home">
+        <use xlink:href="assets/ico.svg#icon-home"></use></svg
+      >Acceuil
+    </h1>
+    &nbsp;
+    <h1 class="titre">
+      <svg class="home">
+        <use xlink:href="assets/ico.svg#icon-spoon-knife"></use></svg
+      >Menu
+    </h1>
+    <h1 class="titre float" (click)="register = true">
+      Register
+      <svg class="home floatleft">
+        <use xlink:href="assets/ico.svg#icon-add-user"></use>
+      </svg>
+    </h1>
+    &nbsp;
+    <h1 class="titre float" (click)="login = true">
+      Login
+      <svg class="home floatleft">
+        <use xlink:href="assets/ico.svg#icon-login"></use>
+      </svg>
+    </h1>
 
-        <div class="faza">
-            Copa Cabana
-        </div>
-    </div>
-    <h1 class="principale"> Vous Pouvez Maintenant Faire Une Commande En Ligne</h1>
-    <button class="btn">Commander</button>
+    <div class="faza"><span>Copa Cabana</span></div>
+  </div>
+  <h1 class="principale">Vous pouvez maintenant faire une commande en ligne</h1>
+  <button class="btn" (click)="commande = true">Commander</button>
 </header>
-<img class="img" src="assets/undraw_Hamburger_8ge6.svg" alt="">
-<div class="map" id="map" class="match-parent"></div>
+<img class="img" src="assets/undraw_Hamburger_8ge6.svg" alt="" />
+<app-shopping (command)="(shopping)" (achat)="(shopping)"></app-shopping>
+<div *ngIf="register">
+  <div (click)="register = false" class="backgroundcolor"></div>
+  <app-register></app-register>
+</div>
+<div *ngIf="login">
+  <div (click)="login = false" class="backgroundcolor"></div>
+  <app-login></app-login>
+</div>
+<div *ngIf="commande">
+  <div (click)="commande = false" class="backgroundcolor"></div>
+
+  <app-commande (sendcommand)="getcommande($event)"></app-commande>
+</div>

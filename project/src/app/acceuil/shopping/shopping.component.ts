@@ -4,46 +4,49 @@ import { GetlisteService } from 'src/app/apis/getliste.service';
 import { Commande } from 'src/app/commande';
 
 export class comm {
-  list : Commande[]
-  long:number
-  latt:number
-  total:number
-
+  list: Commande[];
+  long: number;
+  latt: number;
+  total: number;
 }
 @Component({
   selector: 'app-shopping',
   templateUrl: './shopping.component.html',
-  styleUrls: ['./shopping.component.scss']
+  styleUrls: ['./shopping.component.scss'],
 })
 export class ShoppingComponent implements OnInit {
-  @Input() command :Commande[] =[];
-  @Input() achat:[]
-  list :comm =new comm()
-solde
-details=false
-  constructor(private liste :GetlisteService,private Admin:AdminserviceService) { }
-  commande1:Commande=new Commande()
+  @Input() command: Commande[] = [];
+  @Input() achat: [];
+  list: comm = new comm();
+  solde;
+  details = false;
+  constructor(
+    private liste: GetlisteService,
+    private Admin: AdminserviceService
+  ) {}
+  commande1: Commande = new Commande();
 
   ngOnInit(): void {
-    this.command=this.liste.get()
-    this.solde=this.liste.getsolde()
+    this.command = this.liste.get();
+    this.solde = this.liste.getsolde();
   }
-ecrire(){
-  navigator.geolocation.getCurrentPosition((position)=>{
-this.list.list=this.command
-this.list.long=position.coords.longitude
-this.list.latt=position.coords.latitude
-this.list.total=this.solde.prix
-this.Admin.addcommande(this.list).subscribe(()=>{
-  this.liste.deleteliste()
-  this.command.splice(0,this.command.length)
-  this.solde.prix=0
-})
+  ecrire() {
+    if (this.command.length > 0) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        this.list.list = this.command;
+        this.list.long = position.coords.longitude;
+        this.list.latt = position.coords.latitude;
+        this.list.total = this.solde.prix;
 
-  })
-}
-delete(element){
-  this.liste.delete(element)
-}
-
+        this.Admin.addcommande(this.list).subscribe(() => {
+          this.liste.deleteliste();
+          this.command.splice(0, this.command.length);
+          this.solde.prix = 0;
+        });
+      });
+    }
+  }
+  delete(element) {
+    this.liste.delete(element);
+  }
 }
